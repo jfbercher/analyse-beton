@@ -59,7 +59,7 @@ for slider in sliders:
   slider.style.description_width = '250px'
 
 button = widgets.Button(description="Compute")
-buttonSave = widgets.Button(description="ComputeAndSave")
+#buttonSave = widgets.Button(description="ComputeAndSave")
 output = widgets.Output()
 
 # Fonction de mise à jour
@@ -89,13 +89,14 @@ for slider in sliders:
 
 # Associer la fonction au bouton
 button.on_click(update_estimate)
-buttonSave.on_click(update_estimate_save)
+#buttonSave.on_click(update_estimate_save)
 
 # Affichage de l'interface
 #display(*sliders, button, buttonSave,  output)
 
 # Répartition en colonnes
-col1 = widgets.VBox([*sliders, button, buttonSave])
+#col1 = widgets.VBox([*sliders, button, buttonSave])
+col1 = widgets.VBox([*sliders, button])
 col2 = widgets.VBox([output])
 col1.layout = widgets.Layout(width='100%')
 col2.layout = widgets.Layout(width='100%')
