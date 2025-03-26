@@ -8,6 +8,8 @@ Original file is located at
 """
 
 import dill
+import sklearn
+
 MegaModel = dill.load(open('MegaModel.dill', 'rb'))
 X = dill.load(open('X.dill', 'rb'))
 Y = dill.load(open('Y.dill', 'rb'))
